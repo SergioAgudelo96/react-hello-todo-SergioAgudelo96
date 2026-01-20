@@ -1,11 +1,100 @@
-/* 
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+body {
+	margin: 0;
+	font-family: Arial;
+	background: #f6f6f6;
+}
 
-*/
+/* pa centrar */
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 60px;
+}
+
+/* el grande que dice "todos" */
+
+.title {
+	font-size: 90px;
+	font-weight: 100;
+	color: #e9dcdc;
+	margin: 20px 0;
+	text-align: center;
+}
+
+/* Tarjeta donde está el input y la lista */
+
+.card {
+	width: 650px;
+	background: white;
+	border: 1px solid #eaeaea;
+}
+
+
+/* donde escribo la tarea que vamo a hacer*/
+.todo-input {
+	width: 100%;
+	font-size: 26px;
+	padding: 18px 20px;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	color: #777;
+}
+
+/* (placeholder) */
+.todo-input::placeholder {
+	color: #e9dcdc;
+}
+
+/* Lista donde se ven las tareas */
+.todo-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #efefef;
+}
+
+/* Cada tarea es una fila separadita */
+.todo-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 18px 20px;
+	font-size: 26px;
+	color: #777;
+
+	border-top: 1px solid #f1f1f1;
+}
+
+/* este sería el mensaje  cuando no hay tareas cómo lo va a ver el usuario*/
+.empty {
+	color: #aaa;
+	font-style: italic;
+}
+
+/* botón de basurini escondido para que no se vea hasta que no ponga el hover */
+.delete-btn {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 28px;
+	color: #cc6b6b;
+
+	opacity: 0;
+}
+
+/*aparece solo cuando pasas el mouse por encima que es la basurini*/
+.todo-item:hover .delete-btn {
+	opacity: 1;
+}
+
+.footer {
+	padding: 12px 20px;
+	border-top: 1px solid #efefef;
+	color: #bbb;
+	font-size: 14px;
+}
